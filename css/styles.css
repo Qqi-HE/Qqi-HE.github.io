@@ -7801,11 +7801,6 @@ textarea.form-control-lg {
   background-color: rgba(var(--bs-primary-rgb), var(--bs-bg-opacity)) !important;
 }
 
-.bg-menu {
-  --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-secondary-rgb), var(--bs-bg-opacity)) !important;
-}
-
 .bg-img {
 	background-image:url('../assets/img/illustration/bg.jpg');
 	background-size:cover
