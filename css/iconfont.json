@@ -1,0 +1,16 @@
+{
+  "id": "2812319",
+  "name": "homepage",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "10932439",
+      "name": "bilibili-fill",
+      "font_class": "bilibili-fill",
+      "unicode": "e69c",
+      "unicode_decimal": 59036
+    }
+  ]
+}
