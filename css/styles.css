@@ -249,7 +249,15 @@ a:not([href]):not([class]), a:not([href]):not([class]):hover {
 
 .mb-4 a{color:#15967d;
 		text-decoration: underline;}
-
+		
+.murmur a{color:#15967d;
+		text-decoration: underline;
+		list-style-type: circle;
+		line-height: 120%;
+		padding-left: 25px;
+		text-indent: -25px;
+}
+		
 pre,
 code,
 kbd,
@@ -259,7 +267,6 @@ samp {
   direction: ltr /* rtl:ignore */;
   unicode-bidi: bidi-override;
 }
-
 pre {
   display: block;
   margin-top: 0;
