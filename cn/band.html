@@ -29,6 +29,31 @@
     <link rel="stylesheet" href="../css/style.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <style>
+      .band-tabs {
+        display: flex;
+        gap: 0;
+        margin-bottom: 2rem;
+        border-bottom: 2px solid #F96D00;
+      }
+      .band-tab-btn {
+        background: none;
+        border: none;
+        border-bottom: 3px solid transparent;
+        margin-bottom: -2px;
+        padding: 0.75rem 1.5rem;
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #666;
+        cursor: pointer;
+        transition: color 0.2s, border-color 0.2s;
+        font-family: inherit;
+      }
+      .band-tab-btn:hover { color: #F96D00; }
+      .band-tab-btn.active { color: #F96D00; border-bottom-color: #F96D00; }
+      .tab-content { display: none; }
+      .tab-content.active { display: block; }
+    </style>
   </head>
   <body>
 	<div id="colorlib-page">
@@ -87,7 +112,12 @@
 	    		<div class="row">
 	    			<div class="col-lg-8">
 	    				<div class="row">
-	    					<div class="col-md-12">
+	    					
+							<div class="band-tabs">
+								<button class="band-tab-btn active" onclick="switchBandTab('kover')">K-OVER</button>
+								<button class="band-tab-btn" onclick="switchBandTab('mengyin')">梦音</button>
+							</div>
+							<div id="tab-kover" class="tab-content active"><div class="col-md-12">
 	    						<div class="blog-entry ftco-animate">
 	    					<div class="text pt-2 mt-3">
 					        <span class="category mb-1 d-block"><a href="#">2024 - , 中国上海</a></span>
@@ -117,6 +147,16 @@
 								<li><a href="" class="no-pointer">五月雨二次元音乐会 <i class="icon icon-map-marker loc-opacity"> 复旦相辉堂</i><span class="icon-calendar"> May. 05, 2024</span></a></li>
 							  </ul>
 							<div class="text pt-5"></div>
+						</div>
+						</div>
+						</div>
+							</div>
+					</div>
+					<div id="tab-mengyin" class="tab-content">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="blog-entry ftco-animate">
+									<div class="text pt-2 mt-3">
 							<span class="category mb-1 d-block"><a href="#">2017 - 2019, 中国广东 广州</a></span>
 				              <h3 class="mb-2"><a href="#">梦音 - MUON </a></h3>
 				              <p class="mb-4">隶属于璃羽漫画协会的校园乐队，也是我加入的第一支乐队。我是键盘手，任过队长。现在梦音乐队仍然是活跃在广州的高校乐队。</p>
@@ -132,6 +172,7 @@
 	    				</div>
 
 							
+					</div>
 	    			<div class="row mt-5">
 			          <div class="col">
 			            <div class="block-27 text-center">
@@ -244,6 +285,14 @@
   <script src="../js/scrollax.min.js"></script>
   <script src="../js/google-map.js"></script>
   <script src="../js/main.js"></script>
-    
+  <script>
+    function switchBandTab(tab) {
+      document.querySelectorAll('.tab-content').forEach(function(el){ el.classList.remove('active'); });
+      document.querySelectorAll('.band-tab-btn').forEach(function(el){ el.classList.remove('active'); });
+      document.getElementById('tab-' + tab).classList.add('active');
+      var btn = document.querySelector('.band-tab-btn[onclick="switchBandTab(\'' + tab + '\')"]');
+      if (btn) btn.classList.add('active');
+    }
+  </script>
   </body>
 </html>
