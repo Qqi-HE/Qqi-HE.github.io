@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="{{ page.lang }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="何其锜 Qqi He — Audio and music algorithm engineer. Music information retrieval, generation, and evaluation.">
+  <title>{{ page.title }}</title>
+  <link rel="icon" type="image/x-icon" href="{{ page.asset_prefix }}images/favicon.ico">
+  <link rel="stylesheet" href="{{ page.asset_prefix }}assets/site.css">
+</head>
+<body>
+  <div id="qqi-site">
+    {% include header.html %}
+    <main>
+      {% include sections/about.html %}
+      {% include sections/publications.html %}
+      {% include sections/music.html %}
+      {% include sections/contact.html %}
+    </main>
+    {% include footer.html %}
+  </div>
+  <script src="{{ page.asset_prefix }}assets/site.js"></script>
+</body>
+</html>
