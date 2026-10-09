@@ -104,7 +104,7 @@ html{scroll-behavior:auto}
 </ul>
 						</details></footer></div><script>
 (()=>{const root=document.getElementById('qqi-site');const button=root.querySelector('.language');let language=document.documentElement.lang==='en'?'en':'cn';
-function setLanguage(value){language=value;root.querySelectorAll('[data-lang]').forEach(el=>el.hidden=el.dataset.lang!==value);document.documentElement.lang=value==='cn'?'zh-CN':'en';button.textContent=value==='cn'?'English':'中文';button.setAttribute('aria-label',value==='cn'?'Switch to English':'切换到中文');document.title=value==='cn'?'何其锜 · 2027 · 音频与音乐算法':'Qqi He · 2027 · Audio & Music';}
+function setLanguage(value){language=value;root.querySelectorAll('[data-lang]').forEach(el=>el.hidden=el.dataset.lang!==value);document.documentElement.lang=value==='cn'?'zh-CN':'en';button.textContent=value==='cn'?'English':'中文';button.setAttribute('aria-label',value==='cn'?'Switch to English':'切换到中文');document.title=value==='cn'?'何其锜 · 2027':'Qqi He · 2027';}
 button.addEventListener('click',()=>setLanguage(language==='cn'?'en':'cn'));setLanguage(language);
 function revealNotes(){if(location.hash==='#notes')root.querySelector('#notes').open=true;}window.addEventListener('hashchange',revealNotes);revealNotes();
 
