@@ -1,6 +1,0 @@
-# 使用 GitHub Pages 内置的 Jekyll，无需额外插件。
-theme: null
-exclude:
-  - README.md
-  - scripts
-  - _preview
