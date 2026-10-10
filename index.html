@@ -103,9 +103,9 @@ html{scroll-behavior:auto}
 							<li>2024.11.22 最终还是保留了碎碎念环节，搭主页真的好累啊——至少现在两点半了我还没搭完中文页面…<br><br>仔细想想2024年并不算太特殊的一年，仍然没能让自己满意，也没能有惊喜。可是之前的主页实在是太老旧了，改头换面的同时也想让自己回顾一下断更期间都做了什么（加了新乐队（笑））。<br><br>“认识了很多新的人，过去陪伴我的人们没有离开”，这种瞬间也成了走下去的动力。但是思来想去还是没把致谢放到画集里，虽然可能在之后好些年，它都得撑着我渡过难关了（笑）<br><br>冒昧吐露了一部分心声真是抱歉。谢谢看到这里的你，希望新的一年顺利呀！</li>
 </ul>
 						</details></footer></div><script>
-(()=>{const root=document.getElementById('qqi-site');const button=root.querySelector('.language');let language=document.documentElement.lang==='en'?'en':'cn';
+(()=>{const root=document.getElementById('qqi-site');const button=root.querySelector('.language');const storedLanguage=(()=>{try{return localStorage.getItem('qqi-language')}catch(e){return null}})();let language=storedLanguage==='cn'||storedLanguage==='en'?storedLanguage:((navigator.languages&&navigator.languages.length?navigator.languages[0]:navigator.language||'').toLowerCase().startsWith('zh')?'cn':'en');
 function setLanguage(value){language=value;root.querySelectorAll('[data-lang]').forEach(el=>el.hidden=el.dataset.lang!==value);document.documentElement.lang=value==='cn'?'zh-CN':'en';button.textContent=value==='cn'?'English':'中文';button.setAttribute('aria-label',value==='cn'?'Switch to English':'切换到中文');document.title=value==='cn'?'何其锜 · 2027':'Qqi He · 2027';}
-button.addEventListener('click',()=>setLanguage(language==='cn'?'en':'cn'));setLanguage(language);
+button.addEventListener('click',()=>{const next=language==='cn'?'en':'cn';setLanguage(next);try{localStorage.setItem('qqi-language',next)}catch(e){}});setLanguage(language);
 function revealNotes(){if(location.hash==='#notes')root.querySelector('#notes').open=true;}window.addEventListener('hashchange',revealNotes);revealNotes();
 
 // Duration in milliseconds. Increase for slower scrolling.
